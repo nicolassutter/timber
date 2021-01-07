@@ -169,6 +169,12 @@ Nous nous retrouvons avec une boucle similaire avec ce que nous avons dans `Vue.
 {% enfor %}
 ```
 
+## Le starter theme
+
+En installant Timber dans un projet vierge, il est vivement conseillé d'utilise le [stater thème](https://github.com/timber/starter-theme) officiel.
+
+Il vous donnera directement l'architecture de dossiers correcte pour la maintenabilité du thème. Il vous facilitera notamment tout le travail à faire pour rendre un fichier Twig avec les informations correspondantes etc.
+
 ## Conclusion
 
 Timber propose une approche à Wordpress plus propre et "future-proof" que la méthode traditionnelle. D'ailleurs, il fontionne parfaitement dans un workflow `Wordplate` et rend le développement Wordpress beaucoup plus moderne et agréable.
