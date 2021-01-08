@@ -70,7 +70,7 @@ Il suffit de se rendre sur la page du [plugin](https://WordPress.org/plugins/tim
 
 Comme dit précédemment, `Timber` met en place une architecture MVC (Modèle, Vue, Contrôleur).
 
-Au sein de `WordPress`, le modèle est géré par la `Template Hierachy` et la `WP Query`. Nous n'avons donc qu'à nous occuper de la Vue et du contrôleur.
+Au sein de `WordPress`, le modèle est géré par la [Template Hierachy](https://codex.wordpress.org/fr:Hi%C3%A9rarchie_des_fichiers_mod%C3%A8les) et la [WP Query](https://developer.wordpress.org/reference/classes/wp_query/). Nous n'avons donc qu'à nous occuper de la Vue et du contrôleur.
 
 La vue sera gérée par `Timber` et `Twig`, et le contrôleur par le code `PHP`.
 
@@ -88,7 +88,7 @@ $context['post'] = Timber::get_post();
 Timber::render('templates/single-post.twig', $context);
 ```
 
-Danc cet exemple, le `$context` est un tableau PHP que `Timber` nous génère et qui contient un tas d'infomations utiles dans la plupart des templates. Nous aurons par exemple accès au nom du site, la description du site etc...
+Danc cet exemple, le `$context` est un tableau PHP que `Timber` nous génère et qui contient un tas d'informations utiles dans la plupart des templates. Nous aurons par exemple accès au nom du site, la description du site etc...
 
 Ensuite, nous ajoutons la clé `post` dans ce tableau qui contiendra les données du post en question. `Timber` nous propose sa propre méthode pour le récupérer.
 
@@ -171,13 +171,13 @@ Nous nous retrouvons avec une boucle similaire avec ce que nous avons dans `Vue.
 
 ## Le starter theme
 
-En installant `Timber` dans un projet vierge, il est vivement conseillé d'utiliser le [stater thème](https://github.com/timber/starter-theme) officiel.
+En installant `Timber` dans un projet vierge, il est vivement conseillé d'utiliser le [starter theme](https://github.com/timber/starter-theme) officiel.
 
 Il vous donnera directement l'architecture de dossiers correcte pour la maintenabilité du thème. Il vous facilitera notamment tout le travail à faire pour rendre un fichier Twig avec les informations correspondantes etc.
 
 ## Conclusion
 
-`Timber` propose une approche à `WordPress` plus propre et "future-proof" que la méthode traditionnelle. D'ailleurs, il fontionne parfaitement dans un workflow `Wordplate` et rend le développement `WordPress` beaucoup plus moderne et agréable.
+`Timber` propose une approche à `WordPress` plus propre et "future-proof" que la méthode traditionnelle. D'ailleurs, il fonctionne parfaitement dans un workflow `Wordplate` et rend le développement `WordPress` beaucoup plus moderne et agréable.
 
 Enfin, si vous êtes un développeur `Javascript`, et surtout `Vue`, la syntaxe `Twig` sera comme une seconde nature.
 
