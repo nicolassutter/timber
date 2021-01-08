@@ -1,8 +1,8 @@
-# Timber, pourquoi écrire du Twig dans Wordpress ?
+# Timber, pourquoi écrire du Twig dans WordPress ?
 
-Nous partons à la découverte de `Timber` pour `Wordpress`: un plugin ou une dépendance `Composer` qui permet de mettre en place une architecture MVC au sein de Wordpress.
+Nous partons à la découverte de `Timber` pour `WordPress`: un plugin ou une dépendance `Composer` qui permet de mettre en place une architecture MVC au sein de WordPress.
 
-De ce fait, il est possible de séparer le template HTML du code logique PHP. `Timber` réalisé par [Upstatement](https://upstatement.com/) permet concrètement d'écrire du Twig pour remplacer le templating PHP de `Wordpress`.
+De ce fait, il est possible de séparer le template HTML du code logique PHP. `Timber` réalisé par [Upstatement](https://upstatement.com/) permet concrètement d'écrire du Twig pour remplacer le templating PHP de `WordPress`.
 
 ## Quel est l'intérêt ?
 
@@ -37,13 +37,13 @@ En prenant l'exemple ci-dessous, nous pouvons voir qu'il est plus facile de lire
 
 ## Comment le mettre en place ?
 
-L'installation de `Timber` est en réalité très simple et n'a pas besoin d'être effectuée sur un `Wordpress` vierge. Il est donc possible de le mettre en place dans un projet déjà existant sans risquer de tout casser...
+L'installation de `Timber` est en réalité très simple et n'a pas besoin d'être effectuée sur un `WordPress` vierge. Il est donc possible de le mettre en place dans un projet déjà existant sans risquer de tout casser...
 
-Il existe deux solutions pour l'installer: avec `Composer` ou via `Wordpress`. Le résultat est le même mais il faut noter que la version `Wordpress` n'est pas toujours la plus récente.
+Il existe deux solutions pour l'installer: avec `Composer` ou via `WordPress`. Le résultat est le même mais il faut noter que la version `WordPress` n'est pas toujours la plus récente.
 
 ### Avec Composer
 
-Il suffit de rentrer la commande suivante, à la racine de votre projet `Wordpress` ou bien à la racine de votre thème.
+Il suffit de rentrer la commande suivante, à la racine de votre projet `WordPress` ou bien à la racine de votre thème.
 
 ```sh
 composer require timber/timber
@@ -64,19 +64,19 @@ Et c'est terminé, `Timber` est maintenant installé dans le projet et prêt à 
 
 ### Avec le plugin officiel
 
-Il suffit de se rendre sur la page du [plugin](https://wordpress.org/plugins/timber-library/) et de l'installer comme d'habitude dans l'admin de `Wordpress`. Une fois téléchargé et activé, `Timber` est prêt à être utilisé.
+Il suffit de se rendre sur la page du [plugin](https://WordPress.org/plugins/timber-library/) et de l'installer comme d'habitude dans l'admin de `WordPress`. Une fois téléchargé et activé, `Timber` est prêt à être utilisé.
 
 ## Utilisation concrète
 
 Comme dit précédemment, `Timber` met en place une architecture MVC (Modèle, Vue, Contrôleur).
 
-Au sein de `Wordpress`, le modèle est géré par la `Template Hierachy` et la `WP Query`. Nous n'avons donc qu'à nous occuper de la Vue et du contrôleur.
+Au sein de `WordPress`, le modèle est géré par la `Template Hierachy` et la `WP Query`. Nous n'avons donc qu'à nous occuper de la Vue et du contrôleur.
 
 La vue sera gérée par `Timber` et `Twig`, et le contrôleur par le code `PHP`.
 
 ### Affichage d'un post
 
-De base, `Wordpress` va chercher le fichier `single-post.php`, avec `Timber`, cela ne change pas!
+De base, `WordPress` va chercher le fichier `single-post.php`, avec `Timber`, cela ne change pas!
 
 Cependant `single-post.php` ne contiendra que le code `PHP` et pas le template `HTML`.
 
@@ -111,7 +111,7 @@ Pas si compliqué que ça non ?
 
 ### Utilisation de fonctions PHP
 
-Dans un fichier Twig il nous est tout de même possible d'utiliser des fonctions PHP native et Wordpress.
+Dans un fichier Twig il nous est tout de même possible d'utiliser des fonctions PHP native et WordPress.
 Par exemple `get_header()` et `get_footer()`.
 
 ```html
@@ -177,7 +177,7 @@ Il vous donnera directement l'architecture de dossiers correcte pour la maintena
 
 ## Conclusion
 
-`Timber` propose une approche à `Wordpress` plus propre et "future-proof" que la méthode traditionnelle. D'ailleurs, il fontionne parfaitement dans un workflow `Wordplate` et rend le développement `Wordpress` beaucoup plus moderne et agréable.
+`Timber` propose une approche à `WordPress` plus propre et "future-proof" que la méthode traditionnelle. D'ailleurs, il fontionne parfaitement dans un workflow `Wordplate` et rend le développement `WordPress` beaucoup plus moderne et agréable.
 
 Enfin, si vous êtes un développeur `Javascript`, et surtout `Vue`, la syntaxe `Twig` sera comme une seconde nature.
 
