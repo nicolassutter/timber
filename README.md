@@ -1,6 +1,6 @@
 # Timber, pourquoi écrire du Twig dans WordPress ?
 
-Nous partons à la découverte de `Timber` pour `WordPress`: un plugin ou une dépendance `Composer` qui permet de mettre en place une architecture MVC au sein de WordPress.
+Nous partons à la découverte de `Timber` pour `WordPress`: un plugin et une dépendance `Composer` qui permet de mettre en place une architecture MVC au sein de WordPress.
 
 De ce fait, il est possible de séparer le template HTML du code logique PHP. `Timber` réalisé par [Upstatement](https://upstatement.com/) permet concrètement d'écrire du Twig pour remplacer le templating PHP de `WordPress`.
 
