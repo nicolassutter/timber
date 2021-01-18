@@ -1,6 +1,6 @@
 # Timber, pourquoi écrire du Twig dans WordPress ?
 
-Nous partons à la découverte de `Timber` pour `WordPress`: un plugin et une dépendance `Composer` qui permet de mettre en place une architecture MVC au sein de WordPress.
+Nous partons à la découverte de `Timber` pour `WordPress`: un plugin ou une dépendance `Composer` (au choix) qui permet de mettre en place une architecture MVC au sein de WordPress.
 
 De ce fait, il est possible de séparer le template HTML du code logique PHP. `Timber` réalisé par [Upstatement](https://upstatement.com/) permet concrètement d'écrire du Twig pour remplacer le templating PHP de `WordPress`.
 
@@ -35,9 +35,37 @@ En prenant l'exemple ci-dessous, nous pouvons voir qu'il est plus facile de lire
 {% endblock %}
 ```
 
+**De plus Timber met à disposition des [filtres](https://timber.github.io/docs/guides/filters/) très pratique.**
+
+Utilisation de shortcodes simplifiée
+
+```html
+  <section">
+    {{ post.custom_shortcode_field|shortcodes }}
+  </section>
+```
+
+Limiter le contenu à 30 mots
+
+```html
+  <p>
+      {{ post.post_content|excerpt(30) }}
+  </p>
+```
+
+**Il facilite également l'utilisation des images et de leurs différentes tailles**
+
+```html
+  <img src="{{ post.thumbnail.src }}" />
+```
+
+```html
+  <img src="{{ post.thumbnail.src('medium') }}" />
+```
+
 ## Comment le mettre en place ?
 
-L'installation de `Timber` est en réalité très simple et n'a pas besoin d'être effectuée sur un `WordPress` vierge. Il est donc possible de le mettre en place dans un projet déjà existant sans risquer de tout casser...
+L'installation de `Timber` est en réalité très simple et n'a pas besoin d'être effectuée sur un `WordPress` vierge. Il est donc possible de le mettre en place dans un projet déjà existant sans risquer de tout casser, en effet, il cohabite parfaitement avec le templating `PHP` classique de `Wordpress`.
 
 Il existe deux solutions pour l'installer: avec `Composer` ou via `WordPress`. Le résultat est le même mais il faut noter que la version `WordPress` n'est pas toujours la plus récente.
 
@@ -64,7 +92,7 @@ Et c'est terminé, `Timber` est maintenant installé dans le projet et prêt à 
 
 ### Avec le plugin officiel
 
-Il suffit de se rendre sur la page du [plugin](https://WordPress.org/plugins/timber-library/) et de l'installer comme d'habitude dans l'admin de `WordPress`. Une fois téléchargé et activé, `Timber` est prêt à être utilisé.
+Il suffit de se rendre sur la page du plugin, [ici](https://WordPress.org/plugins/timber-library/) et de l'installer comme d'habitude dans l'admin de `WordPress`. Une fois téléchargé et activé, `Timber` est prêt à être utilisé.
 
 ## Utilisation concrète
 
@@ -171,9 +199,16 @@ Nous nous retrouvons avec une boucle similaire avec ce que nous avons dans `Vue.
 
 ## Le starter theme
 
-En installant `Timber` dans un projet vierge, il est vivement conseillé d'utiliser le [starter theme](https://github.com/timber/starter-theme) officiel.
+En installant `Timber` dans un projet vierge, il est **vivement** conseillé d'utiliser le [starter theme](https://github.com/timber/starter-theme) officiel.
 
-Il vous donnera directement l'architecture de dossiers correcte pour la maintenabilité du thème. Il vous facilitera notamment tout le travail à faire pour rendre un fichier Twig avec les informations correspondantes etc.
+Il vous donnera directement l'architecture de dossiers correcte pour la maintenabilité du thème. Il vous facilitera grandement tout le travail à faire pour procéder au rendu d'un fichier `Twig` avec les informations correspondantes etc.
+
+Une fois téléchargé, il suffit de le placer dans le dossier `themes` de `WordPress`. Nous nous retrouvons donc avec: 
+
+# !!!!!!! Insérer Image !!!!!!
+
+Pour le reste du développement il suffira donc juste de modifier les fichiers `Twig` selon nos besoins. Les fichiers `PHP` peuvent eux aussi être modifiés, pour rajouter les champs `ACF` par [exemple](https://timber.github.io/docs/guides/acf-cookbook/).
+
 
 ## Conclusion
 
